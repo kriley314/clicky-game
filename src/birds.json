@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "name": "Hmgbrd",
+      "image": "https://thumbs.dreamstime.com/t/hummingbird-2619708.jpg",
+      "clicked": false
+    },
+    {
+      "id": 2,
+      "name": "Cktiel",
+      "image": "https://lafeber.com/pet-birds/wp-content/uploads/2018/06/Cockatiel-2-300x300.jpg",
+      "clicked": false
+    },
+    {
+      "id": 3,
+      "name": "BluBrn",
+      "image": "https://d1ia71hq4oe7pn.cloudfront.net/photo/67472541-720px.jpg",
+      "clicked": false
+    },
+    {
+      "id": 4,
+      "name": "Yellow",
+      "image": "https://files.allaboutbirds.net/wp-content/uploads/2015/06/prow-featured.jpg",
+      "clicked": false
+    },
+    {
+      "id": 5,
+      "name": "PtBike",
+      "image": "https://ichef.bbci.co.uk/news/660/cpsprodpb/E318/production/_103463185_gettyimages-480146543.jpg",
+      "clicked": false
+    },
+    {
+      "id": 6,
+      "name": "CuteBW",
+      "image": "https://i.ytimg.com/vi/s9dbAfjlrks/maxresdefault.jpg",
+      "clicked": false
+    },
+    {
+      "id": 7,
+      "name": "BWTpcl",
+      "image": "https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2018/tropicalbird.jpg",
+      "clicked": false
+    },
+    {
+      "id": 8,
+      "name": "BlOrng",
+      "image": "https://i.pinimg.com/originals/4e/0a/82/4e0a82144340d296929b110922f1fbd5.jpg",
+      "clicked": false
+    },
+    {
+      "id": 9,
+      "name": "Toucan",
+      "image": "https://theculturetrip.com/wp-content/uploads/2017/01/1024px-ramphastos_toco_whipsnade_zoo.jpg",
+      "clicked": false
+    },
+    {
+      "id": 10,
+      "name": "Flower",
+      "image": "https://i.ytimg.com/vi/w4h2ei_V32M/maxresdefault.jpg",
+      "clicked": false
+    },
+    {
+      "id": 11,
+      "name": "WhtYlw",
+      "image": "https://i.pinimg.com/736x/d1/be/36/d1be3610f28e47df7e75a862b64571c4--candy-corn-pretty-birds.jpg",
+      "clicked": false
+    },
+    {
+      "id": 12,
+      "name": "BlkBrd",
+      "image": "https://d1ia71hq4oe7pn.cloudfront.net/photo/67454961-480px.jpg",
+      "clicked": false
+    }
+]
+  
