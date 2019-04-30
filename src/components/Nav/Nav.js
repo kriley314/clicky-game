@@ -8,7 +8,7 @@ const Nav = props => (
     <span className="navbar-text">Click all images ONLY ONCE to win!!</span>
     <ul className="nav text-white nav-fills">
       <li className="nav-item">
-        <span className="nav-link" href="#!">Score {props.score} || Top Score {props.topScore}</span>
+        <span className="nav-link" href="#!">Score {props.score} &nbsp;&nbsp;&nbsp;&nbsp; Top Score {props.highScore}</span>
       </li>
     </ul>
   </nav>

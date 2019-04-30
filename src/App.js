@@ -3,8 +3,9 @@ import './App.css';
 import BirdCard from "./components/BirdCard";
 import Grid from "./components/Grid";
 import Nav from "./components/Nav";
-import Wrapper from "./components/Wrapper";
+//import Wrapper from "./components/Wrapper";
 import birds from "./birds.json";
+
 
 class App extends Component {
   // Setting this.state.birds to the birds json array
@@ -30,8 +31,8 @@ class App extends Component {
         } else {
           bird.clicked = true;
           update.score++;
-          if ( update.score > update.topScore ) {
-            update.topScore = update.score;
+          if ( update.score > update.highScore ) {
+            update.highScore = update.score;
           }
         }
       }
@@ -48,15 +49,15 @@ class App extends Component {
 
     update.birds = update.birds.sort(() => 0.5 - Math.random());
 
-    this.setState({ birds: update.birds, score: update.score, topScore: update.topScore });
+    this.setState({ birds: update.birds, score: update.score, highScore: update.highScore });
   }
 
   // Map over this.state.birds and render a BirdCard component for each bird object
   render() {
   
     return (
-      <Wrapper>
-        <Nav score={this.state.score} topScore={this.state.highScore}/>
+      <div>
+        <Nav score={this.state.score} highScore={this.state.highScore}/>
         <Grid shake={!this.state.score && this.state.highScore}>
           {this.state.birds.map( bird => (
             <BirdCard
@@ -64,11 +65,11 @@ class App extends Component {
               key={bird.id}
               image={bird.image}
               bFinished={this.state.score && !(this.state.score % this.state.birds.length )}
-              handleCardClick={this.handleCardClick( bird.id )}
+              handleCardClick={()=>this.handleCardClick( bird.id )}
             />
           ))}
         </Grid>
-      </Wrapper>
+      </div>
     )
   }
 }
