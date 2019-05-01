@@ -44,7 +44,10 @@ class App extends Component {
     };
 
     if ( update.score && !( update.score % update.birds.length )) {
+      // Perfect score!  Starting over!!
+      alert( "Congratulations!!  Perfect Score!!" );
       update.birds.forEach( bird => bird.clicked = false );
+      update.score = 0;
     };
 
     update.birds = update.birds.sort(() => 0.5 - Math.random());
