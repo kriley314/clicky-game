@@ -12,7 +12,8 @@ class App extends Component {
   state = {
     birds,
     score: 0,
-    highScore: 0
+    highScore: 0,
+    gameStatus: "Click all images ONLY ONCE to win!!"
   }
 
   handleCardClick = id => {
@@ -21,7 +22,8 @@ class App extends Component {
     let update = {
       birds: [ ...this.state.birds ],
       score: this.state.score,
-      highScore: this.state.highScore
+      highScore: this.state.highScore,
+      gameStatus: this.state.gameStatus
     }
 
     update.birds.forEach( bird => {
@@ -40,19 +42,21 @@ class App extends Component {
 
     if ( bSecondClick ) {
       update.birds.forEach( bird => bird.clicked = false );
+      update.gameStatus = "Dho!!  You already clicked on THAT one!!";
       update.score = 0;
-    };
-
-    if ( update.score && !( update.score % update.birds.length )) {
+    } else if ( update.score && !( update.score % update.birds.length )) {
       // Perfect score!  Starting over!!
-      alert( "Congratulations!!  Perfect Score!!" );
+      update.gameStatus = "Congratulations!!  Perfect Score!!";
       update.birds.forEach( bird => bird.clicked = false );
       update.score = 0;
-    };
+    } else {
+      // Sailing smoothly through.. Set the message to "encourage"!!!
+      update.gameStatus = "Click all images ONLY ONCE to win!!";
+    }
 
     update.birds = update.birds.sort(() => 0.5 - Math.random());
 
-    this.setState({ birds: update.birds, score: update.score, highScore: update.highScore });
+    this.setState({ birds: update.birds, score: update.score, highScore: update.highScore, gameStatus: update.gameStatus });
   }
 
   // Map over this.state.birds and render a BirdCard component for each bird object
@@ -60,7 +64,7 @@ class App extends Component {
   
     return (
       <div>
-        <Nav score={this.state.score} highScore={this.state.highScore}/>
+        <Nav score={this.state.score} highScore={this.state.highScore} gameStatus={this.state.gameStatus}/>
         <Grid shake={!this.state.score && this.state.highScore}>
           {this.state.birds.map( bird => (
             <BirdCard
