@@ -42,7 +42,7 @@ class App extends Component {
 
     if ( bSecondClick ) {
       update.birds.forEach( bird => bird.clicked = false );
-      update.gameStatus = "Dho!!  You already clicked on THAT one!!";
+      update.gameStatus = "Dho!!  You already clicked on THAT one!!  Your score was:   " + update.score;
       update.score = 0;
     } else if ( update.score && !( update.score % update.birds.length )) {
       // Perfect score!  Starting over!!
